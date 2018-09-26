@@ -1,16 +1,21 @@
 {
-    "name": "mantis/travel-spider",
-    "description": "php spider for travel data",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Mantis",
-            "email": "tangchunlinit@gmail.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "owner888/phpspider": "dev-master"
+  "name": "mantis/travel-spider",
+  "description": "php spider for travel data",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mantis",
+      "email": "tangchunlinit@gmail.com"
     }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "owner888/phpspider": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app"
+    }
+  }
 }
