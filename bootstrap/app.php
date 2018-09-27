@@ -10,6 +10,9 @@ namespace bootstrap;
 
 class app
 {
+    /**
+     * @var array
+     */
     public static $classMap = [];
 
     /**
@@ -30,7 +33,10 @@ class app
         }
     }
 
-
+    /**
+     * @param $class
+     * @return bool
+     */
     static public function load($class) {
         // 自动加载类库
         if (isset($classMap[$class])) {

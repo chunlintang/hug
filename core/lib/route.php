@@ -10,9 +10,19 @@ namespace core\lib;
 
 class route
 {
+    /**
+     * @var mixed
+     */
     public $ctrl;
+    /**
+     * @var mixed
+     */
     public $action;
 
+    /**
+     * route constructor.
+     * @throws \Exception
+     */
     public function __construct() {
         if (isset($_SERVER['REQUEST_URI']) && $_SERVER['REQUEST_URI'] != '/') {
             $path = $_SERVER['REQUEST_URI'];
@@ -25,7 +35,7 @@ class route
                 $this->action = $path_arr[1];
                 unset($path_arr[1]);
             } else {
-                $this->action = 'index';
+                $this->action = conf::get('ACTION', 'route');
             }
 
             $count = count($path_arr) + 2;
@@ -37,8 +47,8 @@ class route
                 $i += 2;
             }
         } else {
-            $this->ctrl = 'index';
-            $this->action = 'index';
+            $this->ctrl = conf::get('CTRL', 'route');
+            $this->action = conf::get('ACTION', 'route');
         }
     }
 }

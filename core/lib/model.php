@@ -11,11 +11,9 @@ namespace core\lib;
 class model extends \PDO
 {
     public function __construct() {
-        $dsn = 'mysql:host=localhost;dbname=phpspider';
-        $username = 'root';
-        $passwd = 'root';
+        $database = conf::all('database');
         try {
-            parent::__construct($dsn, $username, $passwd);
+            parent::__construct($database['DSN'], $database['USERNAME'], $database['PASSWORD']);
         } catch (\Exception $e) {
             throw new \Exception($e);
         }

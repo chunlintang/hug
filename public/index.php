@@ -10,6 +10,7 @@ define('STATIC_PATH', APP_PATH . '/resources');
 define('BOOT', APP_PATH . '/bootstrap');
 define('CORE', APP_PATH . '/core');
 define('APP', APP_PATH . '/app');
+define('CONF', APP_PATH . '/config');
 define('MODULE', 'app');
 
 define('DEBUG', true);
