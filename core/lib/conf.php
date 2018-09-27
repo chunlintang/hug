@@ -19,7 +19,7 @@ class conf
      * @return mixed
      * @throws \Exception
      */
-    static public function get($name, $file) {
+    public static function get($name, $file) {
         if (isset(self::$conf[$file])) {
             return self::$conf[$file][$name];
         }
