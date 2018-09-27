@@ -18,7 +18,9 @@ class app
     /**
      * @throws \Exception
      */
-    static public function run() {
+    public static function run() {
+        \core\lib\log::init();
+        //\core\lib\log::log($_SERVER);
         $route = new \core\lib\route();
         $ctrlClass = $route->ctrl;
         $action = $route->action;
@@ -37,7 +39,7 @@ class app
      * @param $class
      * @return bool
      */
-    static public function load($class) {
+    public static function load($class) {
         // 自动加载类库
         if (isset($classMap[$class])) {
             return true;
