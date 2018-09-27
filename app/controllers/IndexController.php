@@ -8,9 +8,11 @@
 
 namespace app\controllers;
 
-class IndexController
+class IndexController extends Controller
 {
     public function index() {
-        var_dump('hello world');
+        $data = "hello world";
+        $this->assign('data', $data);
+        $this->display('index/index');
     }
 }

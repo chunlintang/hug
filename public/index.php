@@ -6,9 +6,10 @@
  * Time: 10:45 PM
  */
 define('APP_PATH', realpath('../'));
-define('APP', APP_PATH . '/app');
+define('STATIC_PATH', APP_PATH . '/resources');
 define('BOOT', APP_PATH . '/bootstrap');
 define('CORE', APP_PATH . '/core');
+define('APP', APP_PATH . '/app');
 define('MODULE', 'app');
 
 define('DEBUG', true);
