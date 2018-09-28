@@ -13,9 +13,14 @@ define('APP', APP_PATH . '/app');
 define('CONF', APP_PATH . '/config');
 define('MODULE', 'app');
 
+include "../vendor/autoload.php";
+
 define('DEBUG', true);
 
 if (DEBUG) {
+    $whoops = new \Whoops\Run();
+    $whoops->pushHandler(new \Whoops\Handler\PrettyPageHandler());
+    $whoops->register();
     ini_set('display_errors', 'On');
 } else {
     ini_set('display_errors', 'Off');
