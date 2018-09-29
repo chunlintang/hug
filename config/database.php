@@ -6,7 +6,13 @@
  * Time: 10:53 PM
  */
 return [
-    'DSN' => 'mysql:host=localhost;dbname=spider',
-    'USERNAME' => 'root',
-    'PASSWORD' => 'root'
+    'database_type' => 'mysql',
+    'database_name' => 'spider',
+    'server' => 'localhost',
+    'username' => 'root',
+    'password' => 'root',
+    'charset' => 'utf8',
+
+    // 可选参数
+    'port' => 3306,
 ];
