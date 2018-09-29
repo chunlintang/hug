@@ -13,7 +13,9 @@
   "require": {
     "owner888/phpspider": "dev-master",
     "filp/whoops": "^2.2@dev",
-    "symfony/var-dumper": "^4.2@dev"
+    "symfony/var-dumper": "^4.2@dev",
+    "catfan/medoo": "dev-master",
+    "twig/twig": "2.x-dev"
   },
   "autoload": {
     "psr-4": {
