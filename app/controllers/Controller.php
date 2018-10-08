@@ -45,7 +45,7 @@ class Controller
             $loader = new Twig_Loader_Filesystem(STATIC_PATH . '/views');
             $twig = new \Twig_Environment($loader, [
                 'cache' => APP_PATH . '/runtime/caches',
-                //'debug' => DEBUG
+                'debug' => DEBUG
             ]);
             $template = $twig->loadTemplate($file . '.html');
             $template->display($this->assign ? $this->assign : '');
