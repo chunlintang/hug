@@ -15,4 +15,24 @@ class IndexController extends Controller
         $this->assign('data', $data);
         $this->display('index/index');
     }
+
+    public function add() {
+        // TODO
+    }
+
+    public function strore() {
+        // TODO
+    }
+
+    public function edit() {
+        // TODO
+    }
+
+    public function save() {
+        // TODO
+    }
+
+    public function delete() {
+        // TODO
+    }
 }
